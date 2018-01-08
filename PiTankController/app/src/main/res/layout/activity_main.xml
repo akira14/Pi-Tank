@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="jp.co.hibikisol.pitankcontroller.MainActivity">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <WebView
+            android:id="@+id/webView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            app:srcCompat="@mipmap/ic_launcher_round" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="8dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <Button
+                    android:id="@+id/button2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Button" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="bottom"
+                android:orientation="horizontal"
+                android:paddingHorizontal="20dp">
+
+                <com.h6ah4i.android.widget.verticalseekbar.VerticalSeekBarWrapper
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+
+                    <com.h6ah4i.android.widget.verticalseekbar.VerticalSeekBar
+                        android:id="@+id/mySeekBarL"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:max="100"
+                        android:progress="50"
+                        android:progressDrawable="@drawable/progress_drawable"
+                        android:splitTrack="false"
+                        android:thumb="@drawable/thumb_drawable"
+                        app:seekBarRotation="CW270" /> <!-- Rotation: CW90 or CW270 -->
+                </com.h6ah4i.android.widget.verticalseekbar.VerticalSeekBarWrapper>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="right"
+                android:orientation="horizontal"
+                android:visibility="visible">
+
+                <com.h6ah4i.android.widget.verticalseekbar.VerticalSeekBarWrapper
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+
+                    <com.h6ah4i.android.widget.verticalseekbar.VerticalSeekBar
+                        android:id="@+id/mySeekBarR"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:max="100"
+                        android:progress="50"
+                        android:progressDrawable="@drawable/progress_drawable"
+                        android:splitTrack="false"
+                        android:thumb="@drawable/thumb_drawable"
+                        app:seekBarRotation="CW270" />
+
+                    <!-- Rotation: CW90 or CW270 -->
+                </com.h6ah4i.android.widget.verticalseekbar.VerticalSeekBarWrapper>
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="10dp"
+                    android:paddingHorizontal="10dp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </FrameLayout>
+
+</LinearLayout>
